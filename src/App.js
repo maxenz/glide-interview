@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 import OrganigramContainer from "./components/OrganigramContainer";
 import ScrollContainer from "react-indiana-drag-scroll";
 

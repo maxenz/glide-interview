@@ -1,0 +1,138 @@
+.tree {
+  text-align: center;
+  margin-bottom: 30px;
+
+  ul {
+    display: block;
+    white-space: nowrap;
+    padding-top: 20px;
+    position: relative;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+
+    ul {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        border-left: 1px solid #ccc;
+        width: 0;
+        height: 20px;
+      }
+    }
+  }
+
+  li {
+    vertical-align: top;
+    display: inline-block;
+    white-space: normal;
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 20px 5px 0 5px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 50%;
+      border-top: 1px solid #ccc;
+      width: 50%;
+      height: 20px;
+    }
+
+    &::after {
+      right: auto;
+      left: 50%;
+      border-left: 1px solid #ccc;
+    }
+
+    &:only-child {
+      padding-top: 0;
+      &::after,
+      &::before {
+        display: none;
+      }
+    }
+
+    &:last-child {
+      &::before {
+        border-right: 1px solid #ccc;
+        border-radius: 0 5px 0 0;
+        -webkit-border-radius: 0 5px 0 0;
+        -moz-border-radius: 0 5px 0 0;
+      }
+      &::after {
+        border: 0 none;
+      }
+    }
+
+    &:first-child {
+      &::before {
+        border: 0 none;
+      }
+
+      &::after {
+        border-radius: 5px 0 0 0;
+        -webkit-border-radius: 5px 0 0 0;
+        -moz-border-radius: 5px 0 0 0;
+      }
+    }
+  }
+}
+
+
+.tree ul li:last-child > ul {
+  left: -1px;
+}
+
+.tree ul li:only-child > ul {
+  left: 0px;
+}
+
+.tree li div.employee-container {
+  border: 1px solid $employee-card-border-color;
+  text-decoration: none;
+  color: $employee-card-font-color;
+  font-family: $employee-card-font-family;
+  font-size: $employee-card-font-size;
+  display: inline-block;
+  width: 180px;
+  height: 65px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  cursor: pointer;
+}
+.tree li div.employee-container span {
+  display: block;
+}
+
+.tree li div.employee-container .spacer {
+  background-color: lightblue;
+  display: inline-block;
+  width: 10px;
+}
+
+.tree li div.employee-container:hover,
+.tree li div.employee-container:hover + ul li div.employee-container {
+  background: #c8e4f8;
+  color: #000;
+  border: 1px solid #94a0b4;
+}
+
+.tree li div.employee-container:hover + ul li::after,
+.tree li div.employee-container:hover + ul li::before,
+.tree li div.employee-container:hover + ul::before,
+.tree li div.employee-container:hover + ul ul::before {
+  border-color: #94a0b4;
+}

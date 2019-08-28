@@ -3,8 +3,7 @@ import Employee from "./Employee";
 import { connect } from "react-redux";
 
 class EmployeeList extends Component {
-  render() {
-    console.log('RENDER');
+  render() {    
     const { children, id, collapsed, onChange } = this.props;        
 
     return (

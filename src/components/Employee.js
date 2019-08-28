@@ -20,8 +20,8 @@ const Employee = props => {
         <Loader
           type="TailSpin"
           color="#00b894"
-          height="50"
-          width="50"
+          height={50}
+          width={50}
           className="employee-loader"
         />
       )}

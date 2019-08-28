@@ -1,0 +1,49 @@
+.avatar-circle {
+  width: 30px;
+  height: 30px;
+  background-color: $green;
+  text-align: center;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  margin-right: 10px;
+
+  .initials {
+    position: relative;
+    font-size: $avatar-font-size;
+    line-height: 33px;
+    color: $white;
+    font-family: $avatar-font-family;
+    font-weight: bold;
+  }
+}
+
+.employee-container {
+  padding-top: 20px;
+  background: $white;
+  box-shadow: 5px 5px 20px;
+
+  .employee-principal-data,
+  .avatar-circle {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .employee-principal-data {
+    text-align: left;
+  }
+
+  .employee-name {
+    font-weight: bold;
+    color: $black;
+  }
+
+  .employee-loader {
+    position: absolute;
+    left: 40%;
+  }
+
+  .employee-principal-data-container.loading {
+    opacity: 0.2;
+  }
+}
