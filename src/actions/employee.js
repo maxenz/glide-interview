@@ -62,7 +62,9 @@ export function getEmployees(employeeId) {
         dispatch(setEmployees(data, employeeId));
         dispatch(toggleEmployeeLoader(employeeId));
       } else {
-        dispatch(toggleCollapsedEmployee(employeeId));
+        if (employeeSelected.children && employeeSelected.children.length > 0) {
+          dispatch(toggleCollapsedEmployee(employeeId));
+        }        
       }
     } catch (error) {
       dispatch(toggleEmployeeLoader(employeeId));

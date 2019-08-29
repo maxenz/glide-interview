@@ -5,8 +5,7 @@ import {
 } from "../actions/actionTypes";
 import dotProp from "../helpers/chainableDotProp";
 
-const initialState = {
-  loading: false,
+const initialState = {  
   error: null,
   data: []
 };

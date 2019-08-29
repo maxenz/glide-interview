@@ -1,7 +1,7 @@
 import React from "react";
-import EmployeeAvatar from "./EmployeeAvatar";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import Loader from "react-loader-spinner";
+import EmployeeAvatar from "./EmployeeAvatar";
+import EmployeeLoader from "./EmployeeLoader";
 
 const Employee = props => {
   const {
@@ -16,15 +16,7 @@ const Employee = props => {
 
   return (
     <div className="employee-container" onClick={() => onChange(id)}>
-      {isLoadingChildren && (
-        <Loader
-          type="TailSpin"
-          color="#00b894"
-          height={50}
-          width={50}
-          className="employee-loader"
-        />
-      )}
+      {isLoadingChildren && (<EmployeeLoader />)}
       <div
         className={`employee-principal-data-container ${
           isLoadingChildren ? "loading" : ""

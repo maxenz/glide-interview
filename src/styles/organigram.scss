@@ -118,21 +118,21 @@
 }
 
 .tree li div.employee-container .spacer {
-  background-color: lightblue;
+  background-color: $light-blue;
   display: inline-block;
   width: 10px;
 }
 
 .tree li div.employee-container:hover,
 .tree li div.employee-container:hover + ul li div.employee-container {
-  background: #c8e4f8;
+  background: $light-blue;
   color: #000;
-  border: 1px solid #94a0b4;
+  border: 1px solid $border-employee-container-color;
 }
 
 .tree li div.employee-container:hover + ul li::after,
 .tree li div.employee-container:hover + ul li::before,
 .tree li div.employee-container:hover + ul::before,
 .tree li div.employee-container:hover + ul ul::before {
-  border-color: #94a0b4;
+  border-color: $border-employee-container-color;
 }
