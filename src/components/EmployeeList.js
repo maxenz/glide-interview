@@ -5,8 +5,7 @@ import { connect } from "react-redux";
 class EmployeeList extends Component {
 
   render() {    
-    const { children, id, collapsed, onChange } = this.props;
-    console.log(`${this.props.first} ${this.props.last}`); 
+    const { children, id, collapsed, onChange } = this.props;    
 
     return (
       <ul>

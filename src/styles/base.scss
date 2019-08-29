@@ -1,8 +1,6 @@
 html,
 body {
   margin: 0;
-  height: 100%;
-  width: 100%;
   background: $gray-background;
 }
 
@@ -13,6 +11,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding-top: 60px;
+  padding-bottom: 40px;
 }
 
 * {
